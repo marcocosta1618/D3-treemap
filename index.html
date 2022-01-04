@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="icons8-view-quilt-48.png">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script defer src="js/index.js" type="module"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+    <title>Sales Treemap</title>
+</head>
+
+<body>
+    <div class="content">
+        <h1 id="title"></h1>
+        <h2 id="description"></h2>
+        <div class="buttons-container">
+            <button class="kickstarters">Kickstarter pledges</button>
+            <button class="movies">Movie sales</button>
+            <button class="videogames">Video Games sales</button>
+        </div>
+        <div class="graph-container">
+            <svg class='graph'>
+                <!-- D3 -->
+            </svg>
+            <div id="tooltip">
+            </div>
+            <!-- <div class="legendArea">
+        </div> -->
+        </div>
+    </div>
+    <footer>
+        <p>Marco Costa 2021. <a target="_blank" href="https://icons8.com/icon/98008/view-quilt">View Quilt icon</a> by <a target="_blank"
+                href="https://icons8.com">Icons8</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
