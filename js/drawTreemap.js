@@ -18,6 +18,9 @@ export default function drawTreemap(dataSet, graphDim) {
     // tooltip helper functions
     const { handleMouseover, handleMouseout, getGraphRect } = tooltip();
     
+    // animated transition definition
+    const trans = d3.transition().ease(d3.easeCubicIn).duration(500);
+    
     //// process data for the treemap
     // layout dim and padding
     const treemap = d3.treemap().size([w, h]).padding(3);
@@ -40,9 +43,7 @@ export default function drawTreemap(dataSet, graphDim) {
 
     // create an array of unique ids for every nodes
     const clipPathID = nodes.map(() => `O-${Math.random().toString(16).slice(2)}`);
-
-    // animated transition
-    const trans = d3.transition().duration(750);
+    
 
     //// data joins
     // groups and groupsEnter
