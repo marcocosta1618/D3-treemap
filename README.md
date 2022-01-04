@@ -11,3 +11,5 @@ This document is hosted on [GitHub-pages](https://marcocosta1618.github.io/D3-tr
 ![SASS](https://img.shields.io/badge/SASS-cc6699.svg?&logo=sass&logoColor=white)&nbsp;
 
 ---
+
+![d3-treemap](https://user-images.githubusercontent.com/78434326/148075591-dfeec15a-987a-4d99-adfe-e361b12ae75d.png)
