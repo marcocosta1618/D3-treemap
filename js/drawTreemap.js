@@ -90,18 +90,20 @@ export default function drawTreemap(dataSet, graphDim) {
     const splitName = (node) => node.data.name.split(/\s/g).map(word => ({ word }));
 
     groupsEnter.append('text')
-            .attr('font-size', 13)
+            .attr('font-size', 10)
         .merge(text)
             .attr('clip-path', (d,i) => `url(#${clipPathID[i]})`)
             .selectAll('tspan').data(d => d.height === 0 ? splitName(d) : '')
             .enter().append('tspan')
-            .attr('opacity', 0)
+            .attr('y', (d,i) => 0 - (i*17))
+            .attr('fill-opacity', 0)
         .merge(text.selectAll('tspan').data(d => splitName(d)))
-            .attr('x', 3)
-            .attr('y', (d,i) => 17 + (i *17))
             .text(d => d.word)
             .transition(trans)
-            .attr('opacity', 1);
+            .attr('x', 3)
+            .attr('y', (d,i) => 17 + (i *17))
+            .attr('font-size', 13)
+            .attr('fill-opacity', 1);
 
     // get div.graphContainer ClientRect after render - for tooltip positioning
     getGraphRect();
